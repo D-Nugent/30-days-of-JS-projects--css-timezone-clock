@@ -1,0 +1,194 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+
+
+header {
+  width: 100%;
+  background-color: #143058;
+  color: #d0d6de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.primary-heading{
+  margin: 1% 0;
+}
+
+.clock-wrapper{
+  display: flex;
+  justify-content: center;
+  min-height: 90%;
+}
+
+.local-clock{
+  flex-grow: 1;
+  width: 25vw;
+  border-right: 5px groove #d0d6de;
+  color:#EFEFEF;
+  background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.overview{
+  width: 80%;
+  font-size: 14px;
+}
+
+.overview__text a {
+  text-decoration:underline double #EFEFEF;
+  color: #EFEFEF;
+}
+
+.regional-clocks{
+  flex-grow: 3;
+  max-width: 75vw;
+  background-color: #eeebe8;
+  color: #143058;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+/* Clock Modal */
+
+.clock-modal{
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  width: 15vw;
+  height: 15vw;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://unsplash.it/200?image=881&blur=5);
+  background-size: contain;
+}
+
+.clock-modal__face{
+  width: 100%;
+  height: 100%;
+  border: 16px solid aliceblue;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-modal__dial{
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+  background-color: aliceblue;
+  z-index: 1;
+  box-shadow: 
+  0 0 0 4px rgba(0,0,0,0.1),
+  inset 0 0 0 3px #EFEFEF,
+  0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-modal__hand{
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background-color: black;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+}
+
+.clock-modal__hour{
+  width: 25%;
+  left: 25%;
+  height: 6px;
+}
+
+.clock-modal__minute{
+  width: 50%;
+  height: 4px;
+}
+
+.clock-modal__time{
+  min-height: 18px;
+  margin: 8px 0 0;
+}
+
+.clock-modal__region{
+  margin: 8px;
+}
+/* ----------- */
+/* Regional Clocks */
+.region-container{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.region-modify{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.region-modify__dropdown{
+  width: 30%;
+}
+
+.region-modify__dropdown-option{
+  width: 30%;
+}
+
+.region-modify__add-clock{
+  width: 30%;
+  margin-top: 8px;
+  background-color: #143058;
+  color: #d0d6de;
+  padding: 4px 8px;
+}
+
+.region-modify__add-clock:hover{
+  cursor: pointer;
+}
+
+.region-modify__dropdown:hover{
+  cursor: pointer;
+}
+
+.region-container__clocks{
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.region-clock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

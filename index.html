@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timezone Clock</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1 class="primary-heading">Timezone Clock</h1>
+  </header>
+  <main class="clock-wrapper">
+    <section class="local-clock">
+      <h2 class="local-clock__heading">Local Time:</h2>
+      <article class="clock-modal">
+        <div class="clock-modal__face">
+          <div class="clock-modal__dial"></div>
+          <div class="clock-modal__hand clock-modal__hour"></div>
+          <div class="clock-modal__hand clock-modal__minute"></div>
+          <div class="clock-modal__hand clock-modal__second"></div>
+        </div>
+      </article>
+      <p class="clock-modal__time"></p>
+      <p class="clock-modal__region"></p>
+      <aside class="overview">
+        <p class="overview__text">
+          Hi there, welcome to my regional timezone converter. To get 
+          started simply choose a region from the dropdown and click
+          'Add Clock'. 
+        </p>
+        <p class="overview__text">
+          Rather than calculating the difference in hours between
+          timezones I opted instead to convert the time via localString
+          options; this ensures that the clocks account for daylight savings.
+        </p>
+        <p class="overview__text">
+          To see more of my work check out my portfolio 
+          site <a href="https://www.davidnugent.me">here</a> or 
+          my gitHub <a href="https://www.github.com/d-nugent">here</a>.
+        </p>
+      </aside>
+    </section>
+    <section class="regional-clocks">
+      <h2 class="regional-clocks__heading">Other Regions:</h2>
+      <section class="region-container">
+        <div class="region-modify">
+          <p class="region-modify__status">
+            Why not try adding a new regional clock?
+          </p>
+          <select class="region-modify__dropdown" name="region-selector" id="region-selector">
+          </select>
+          <button class="region-modify__add-clock">Add Clock</button>
+        </div>
+        <section class="region-container__clocks">
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="./utils/randomImage.js"></script>
+  <script src="./utils/createNode.js"></script>
+<script src="./utils/makeClock.js"></script>
+<script src="./utils/addClock.js"></script>
+<script src="./data/regions.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
